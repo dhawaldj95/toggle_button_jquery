@@ -1,0 +1,66 @@
+
+input[type="checkbox"]{
+	visibility: hidden;
+}
+#button
+{
+	position: absolute;
+    background-color: white;
+    box-shadow: 2px 2px 2px grey;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    transition: all .4s ease;
+    cursor: pointer;
+    top: 4px;
+    left: 7px;
+    z-index: 1;
+	
+}
+
+.frame:after {
+	content: '';
+	position: absolute;
+	top: 14px;
+	left: 14px;
+	height: 2px;
+	width: 52px;
+
+	
+	border-radius: 50px;
+	background: #111;
+
+	
+	box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
+}
+
+#button:after {
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 10px;
+    
+	border-radius: 50px;
+	background: #333;
+	left: 5px;
+	top: 5px;
+    z-index: 1;
+	box-shadow: inset 0px 1px 1px rgba(0,0,0,1), 0px 1px 0px rgba(255,255,255,0.9);
+}
+.slideOne{
+	height: 300px;
+	width: 100px;
+}
+
+.frame{
+	position: relative;
+	height: 30px;
+    width: 80px;
+    border-radius: 30px;
+    background-color: black;
+}
+
+
+.frame input[type=checkbox]:checked + #button:after {
+	background: #00bf00;
+}
